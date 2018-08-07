@@ -11,7 +11,7 @@ package cn.yk.practice.leetcode;
  * 2.相同两个数异或为0。
  * 3.0异或一个数为那个数本身。
  */
-public class SingleNumber {
+public class TestSingleNumber {
     public int singleNumber(int[] A) {
         return 0;
     }

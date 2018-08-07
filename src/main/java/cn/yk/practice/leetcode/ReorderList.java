@@ -17,9 +17,10 @@ public class ReorderList {
             return;
         head = doReorder(head);
     }
+    // TODO:
     private ListNode doReorder(ListNode head){
         if ( head.next == null)
             return head;
-
+        return head;
     }
 }

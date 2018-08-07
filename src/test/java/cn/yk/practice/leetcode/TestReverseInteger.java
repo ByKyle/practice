@@ -13,7 +13,7 @@ package cn.yk.practice.leetcode;
  * Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?
  * Throw an exception? Good, but what if throwing an exception is not an option? You would then have to re-design the function (ie, add an extra parameter).
  */
-public class ReverseInteger {
+public class TestReverseInteger {
 
     public static void main(String[] args) {
         ReverseInteger r = new ReverseInteger();
@@ -24,8 +24,6 @@ public class ReverseInteger {
         }
 
     }
-
-
 
 //    public Long result;
 //

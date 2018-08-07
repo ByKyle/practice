@@ -9,6 +9,6 @@ import cn.yk.practice.basic_object.TreeNode;
  *
  * 后序遍历的简单应用，也可以使用层序遍历
  */
-public class MaximumDepthofBinaryTree {
+public class TestMaximumDepthofBinaryTree {
 
 }

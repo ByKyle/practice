@@ -8,7 +8,7 @@ package cn.yk.practice.leetcode;
  * Follow up:
  * Could you do this in-place?
  */
-public class RotateImage {
+public class TestRotateImage {
     public void rotate(int[][] matrix) {
     }
 
@@ -24,7 +24,7 @@ public class RotateImage {
     }
 
     public static void main(String[] args) {
-        RotateImage r = new RotateImage();
+        TestRotateImage r = new TestRotateImage();
         int[][] a = {
                 {1, 2, 3},
                 {4, 5, 6},

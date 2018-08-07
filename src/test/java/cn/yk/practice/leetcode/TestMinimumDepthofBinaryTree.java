@@ -15,5 +15,5 @@ import cn.yk.practice.basic_object.TreeNode;
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class MinimumDepthofBinaryTree {
+public class TestMinimumDepthofBinaryTree {
 }
