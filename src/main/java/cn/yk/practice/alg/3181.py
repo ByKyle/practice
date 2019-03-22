@@ -1,28 +1,35 @@
-y = [0,-1,0,1]
-cases = int(input())
-for t in range(cases):
-    n = int(input())
-    graph = list(map(int,input().split()))
-    graph = [[graph[n*i+j] for i in range(n)] for j in range(n)]
-    dist = [[float("Inf")]*n for i in range(n)]
-    dist[0][0] = graph[0][0]
-    nodeset = set(())
-    nodeset.add((graph[0][0],0,0))
-
-    def isValid(i,j):
-        return i>=0 and j>=0 and i<n and j<n
-    
-    while nodeset:
-        minnode = min(nodeset)
-        d,i,j = minnode
-        nodeset.remove(minnode)
-        for k in range(4):
-            X, Y = i+x[k], j+y[k]
-            if isValid(X,Y):
-                if dist[X][Y]>dist[i][j]+graph[X][Y]:
-#                     if dist[X][Y]!=float("Inf"):
-#                         nodeset.remove((dist[X][Y],X,Y))
-                    dist[X][Y] = dist[i][j]+graph[X][Y]
-                    nodeset.add((dist[X][Y],X,Y))
-    print(dist[n-1][n-1])
-                    
+T = int(input())
+for _ in range(T):
+	[n, m] = list(map(int, input().split()))
+	r1 = list(map(int, input().split()))
+	r2 = list(map(int, input().split()))
+	common = []
+	i, j, s = 0, 0, 0
+	while i < n and j < m:
+		if r1[i] < r2[j]:
+			i += 1
+		elif r1[i] > r2[j]:
+			j += 1
+		else:
+			common.append(r1[i])
+			i += 1
+			j += 1
+	i, j = 0, 0
+	for x in common:
+		a, b = 0, 0
+		while i < n:
+			a += r1[i]
+			i += 1
+			if i == n or x < r1[i]:
+				break;
+		while j < m:
+			b += r2[j]
+			j += 1
+			if j == m or x < r2[j]:
+				break;
+		s += max(a, b)
+	a = sum(r1[i:])
+	b = sum(r2[j:])
+	s += max(a, b)
+	# s += sum(common)
+	print (s)
